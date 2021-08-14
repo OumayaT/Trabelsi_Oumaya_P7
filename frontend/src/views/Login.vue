@@ -1,10 +1,10 @@
 <template>
   <div class="page-container">
     <b-container fluid>
-      <b-row class="text-center justify-content-center">
+      <b-row class="text-center justify-content-center ">
         <b-col cols="12" lg="4">
           <b-card
-            class="account-card border-0 shadow p-3 mb-5 mt-3 bg-white rounded"
+            class="account-card border-0  p-3 mb-5 mt-3 bg-white connexion"
           >
             <div class="pt-sm-3 pt-lg-0">
               <b-card-text class="login-text h4">Se connecter</b-card-text>
@@ -114,6 +114,12 @@ export default {
 </script>
 
 <style lang="scss">
+
+.account-card{
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px #ba4e55;
+
+}
 a {
   text-decoration: none;
   color: #2c3e50 !important;

@@ -129,8 +129,8 @@ a {
 }
 
 .account-btn {
-  background-color: rgba(253, 45, 6, 0.8);
-  color: white;
+  background-color: #ba4e55;
+  color: #122441;
   border-radius: 1rem;
   border: none;
   margin-bottom: 1rem;
@@ -138,8 +138,8 @@ a {
   &:hover,
   &:focus,
   &:active {
-    background-color: rgb(253, 45, 6);
-    color: white;
+    background-color: #122441;
+    color: #ba4e55;
     outline: none;
   }
 }
