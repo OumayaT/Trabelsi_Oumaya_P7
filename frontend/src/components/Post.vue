@@ -1,13 +1,11 @@
 <template>
   <div>
     <b-card
-      class="mx-auto border-0 shadow p-0 p-lg-3 mb-2 mt-2 mb-lg-5 mt-lg-3 bg-white rounded"
-    >
+      class="mx-auto shadow p-0 p-lg-3 mb-2 mt-2 mb-lg-5 mt-lg-3 bg-white post_list">
       <div class="d-flex align-items-center">
         <div class="d-flex mr-3">
           <router-link
-            :to="{ name: 'UserProfile', params: { userId: post.User.id } }"
-          >
+            :to="{ name: 'UserProfile', params: { userId: post.User.id } }">
             <ProfileImage
               :src="post.User.imageUrl"
               customClass="post-profile-picture"
@@ -155,10 +153,23 @@ export default {
 </script>
 
 <style lang="scss">
+
+.post__image{
+border-radius: 10px;
+width: 900px;
+}
+.post_list{
+  
+    border: 5px solid #ba4e55;
+  border-radius: 20px;
+  
+  
+}
 .div-post-picture {
   width: 50px;
   height: 50px;
   margin-bottom: 1rem;
+  
 }
 
 .post-profile-picture {

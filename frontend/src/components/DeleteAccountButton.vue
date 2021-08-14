@@ -41,6 +41,8 @@ export default {
   border: none;
   &:hover {
     text-decoration: underline;
+    color:red;
+    font-size: 20px;
   }
   &:focus {
     outline: none;

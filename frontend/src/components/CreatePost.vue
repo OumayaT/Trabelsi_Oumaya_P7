@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div >
     <b-form @submit="onSubmit">
       <PostForm
         @onFileSelected="onFileSelected"
@@ -59,4 +59,5 @@ export default {
 .custom-file-label {
   text-align: left;
 }
+
 </style>

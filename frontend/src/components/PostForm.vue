@@ -121,6 +121,7 @@ export default {
 </script>
 
 <style lang="scss">
+
 #preview img {
   max-width: 100%;
   max-height: 500px;
