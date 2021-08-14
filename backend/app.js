@@ -25,7 +25,7 @@ app.use((req, res, next) => {
   )
   next()
 })
-
+require('dotenv').config();
 app.use(bodyParser.json())
 
 app.use('/public', express.static(path.join(__dirname, 'public')))

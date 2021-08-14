@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken')
 const { User } = db.sequelize.models
 
 const newToken = user => {
-  token = jwt.sign({ userId: user.id }, 'RANDOM_TOKEN_SECRET', {
+  token = jwt.sign({ userId: user.id }, process.env.TOKEN_SECRET, {
     expiresIn: '24h'
   })
   return { user, token }
