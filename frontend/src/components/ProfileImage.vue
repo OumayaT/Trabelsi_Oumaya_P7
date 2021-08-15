@@ -20,13 +20,8 @@ export default {
 .profile-picture {
   overflow: hidden;
   border-radius:15px ;
-  background: black;
   border: 3px solid #BA4D55;
   box-shadow: 3px 3px 3px #D5D5D5;
   
-
-  &__img {
-    transform: scale(1.35);
-  }
 }
 </style>

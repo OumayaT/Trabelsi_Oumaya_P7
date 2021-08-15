@@ -12,7 +12,6 @@
 
 <script>
 import { apiClient } from '../services/ApiClient'
-import router from '../router/index'
 import Post from '../components/Post'
 import Menu from '../components/Menu'
 

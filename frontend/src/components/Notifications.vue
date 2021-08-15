@@ -125,7 +125,7 @@ export default {
     right: -4px;
     font-size: 12px;
     border-radius: 100%;
-    background: red;
+    background: #ba4e55;
     color: white;
     height: 20px;
     width: 20px;

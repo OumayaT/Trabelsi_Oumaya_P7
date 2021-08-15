@@ -1,6 +1,6 @@
-const db = require('../../src/models')
-const Sequelize = db.Sequelize
-const jwt = require('jsonwebtoken')
+const db = require('../../src/models') 
+const Sequelize = db.Sequelize 
+const jwt = require('jsonwebtoken')  // Génère un token sécurisé
 const { User } = db.sequelize.models
 
 const newToken = user => {
@@ -10,6 +10,7 @@ const newToken = user => {
   return { user, token }
 }
 
+//Inscription de l'utilisateur 
 exports.signup = (req, res, next) => {
   User.create({
     firstName: req.body.firstName,
@@ -85,6 +86,8 @@ exports.getAllUsers = (req, res, next) => {
     })
 }
 
+
+//supprimer compte utilisateur
 exports.deleteUserAccount = async (req, res, next) => {
   try {
     const user = req.user.admin

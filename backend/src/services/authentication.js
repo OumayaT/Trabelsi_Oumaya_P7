@@ -1,4 +1,4 @@
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcrypt')  // Chiffrer le mot de passe
 
 function ensurePasswordIsStrongEnough (value) {
   const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z0-9\d@$!%*?&]{8,}$/
@@ -13,7 +13,7 @@ function addAuthenticationOn (User) {
   const encryptPassword = user => {
     if (user.changed('password')) {
       return bcrypt.hash(user.password, 10).then(hash => {
-        user.password = hash
+        user.password = hash  //hashage du mot de passe
       })
     }
   }

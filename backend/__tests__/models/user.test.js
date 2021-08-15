@@ -23,7 +23,7 @@ describe('User', () => {
       .save()
       .then(() => {
         expect(user.password).not.toBeNull()
-        expect(user.password).not.toStrictEqual('azerty')
+        expect(user.password).not.toStrictEqual(process.env.password)
       })
       .catch(error => console.log(error))
   })

@@ -50,7 +50,6 @@
 
 <script>
 import { apiClient } from '../services/ApiClient'
-import router from '../router/index'
 import ProfileImage from './ProfileImage'
 
 export default {

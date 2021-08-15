@@ -1,18 +1,17 @@
 const express = require('express')
 const bodyParser = require('body-parser')
-
 const app = express()
-
 const path = require('path')
 
+//appel aux différentes fonctions implémentées 
 const auth = require('./src/middleware/auth')
-
 const userCtrl = require('./src/controllers/user')
 const notificationsCtrl = require('./src/controllers/notifications')
-
 const postsRoutes = require('./src/routes/posts')
 const userRoutes = require('./src/routes/user')
 
+
+// paramétrage des headers
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*')
   res.setHeader(
@@ -28,6 +27,7 @@ app.use((req, res, next) => {
 require('dotenv').config();
 app.use(bodyParser.json())
 
+
 app.use('/public', express.static(path.join(__dirname, 'public')))
 
 app.use('/api/posts', postsRoutes)
@@ -40,4 +40,6 @@ app.delete('/api/users/:id', auth, userCtrl.deleteUserAccount)
 app.get('/api/notifications', auth, notificationsCtrl.getNotificationsOfOneUser)
 app.delete('/api/notifications/:id', auth, notificationsCtrl.deleteNotification)
 
+
+// Export de l'application express pour déclaration dans server.js
 module.exports = app

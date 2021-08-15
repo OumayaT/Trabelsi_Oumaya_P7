@@ -1,4 +1,4 @@
-const fs = require('fs')
+const fs = require('fs')  // Permet de gérer les fichiers stockés
 
 function deleteFile (imageUrl) {
   if (!imageUrl) return

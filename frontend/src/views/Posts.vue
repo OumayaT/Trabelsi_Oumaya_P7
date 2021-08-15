@@ -16,8 +16,6 @@
 </template>
 
 <script>
-import { apiClient } from '../services/ApiClient'
-import router from '../router/index'
 import { mapState, mapActions } from 'vuex'
 import CreatePost from '../components/CreatePost'
 import PostsList from '../components/PostsList'

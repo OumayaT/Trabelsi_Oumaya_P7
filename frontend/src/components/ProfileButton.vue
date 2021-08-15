@@ -20,7 +20,7 @@
         `collapsed mt-2 position-fixed ${areActionsVisible && 'visible'}`
       "
     >
-      <b-card class="border-0" @click="toggleActions">
+      <b-card  class="border-0" @click="toggleActions">
         <p class="card-text">
           <button
             class="collapsed-btn btn-block text-left"
@@ -106,7 +106,8 @@ export default {
     background-color: rgba(108, 117, 125, 0.2) !important;
   }
   &__img {
-    height: 30px;
+    height: 20px;
+    
   }
 }
 

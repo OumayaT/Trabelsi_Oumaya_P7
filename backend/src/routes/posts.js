@@ -1,13 +1,18 @@
 const express = require('express')
-const router = express.Router()
+const router = express.Router() //// Appel du routeur avec la méthode mise à disposition par Express
 
+//Ajout de fonction pour la création des posts
 const postsCtrl = require('../controllers/posts')
 const commentsCtrl = require('../controllers/comments')
 const likesCtrl = require('../controllers/likes')
 
-const auth = require('../middleware/auth')
+// IMPORTATION MIDDLEWARES
+const auth = require('../middleware/auth')  
 const multer = require('../middleware/multer-config')
 
+
+
+//Création des différentes ROUTES de l'API 
 router.post('/', auth, multer, postsCtrl.createPost)
 router.get('/:id', auth, postsCtrl.getOnePost)
 router.get('/', auth, postsCtrl.getAllPosts)

@@ -1,11 +1,10 @@
-const fs = require('fs')
-
+const fs = require('fs') // Gestion des fichiers stockés
 const db = require('../models')
 const { Post } = db.sequelize.models
 
+//Créer un Post
 exports.createPost = async (req, res, next) => {
   let postObject = req.body
-
   if (req.file) {
     postObject = JSON.parse(req.body.post)
     postObject.imageUrl = `${req.protocol}://${req.get('host')}/public/${
@@ -28,6 +27,7 @@ exports.createPost = async (req, res, next) => {
   }
 }
 
+// Obtenir un Post
 exports.getOnePost = (req, res, next) => {
   Post.findOne({
     where: { id: req.params.id },
@@ -40,6 +40,9 @@ exports.getOnePost = (req, res, next) => {
     .then(post => res.status(200).json({ post }))
     .catch(error => res.status(404).json({ error }))
 }
+
+
+// Obtenir tous les Posts
 
 exports.getAllPosts = (req, res, next) => {
   const limit = 4
@@ -67,6 +70,7 @@ exports.getAllPosts = (req, res, next) => {
     .catch(error => res.status(400).json({ error }))
 }
 
+//Modifier un post
 exports.modifyPost = (req, res, next) => {
   const postObject = req.file
     ? {
@@ -88,12 +92,11 @@ exports.modifyPost = (req, res, next) => {
     }
   })
 }
-
+//Supprimer Post
 exports.deletePost = (req, res, next) => {
   const where = {
     id: req.params.id
   }
-
   if (!req.user.admin) {
     where.userId = req.user.id
   }

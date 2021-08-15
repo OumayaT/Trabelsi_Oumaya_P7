@@ -109,7 +109,6 @@
 
 <script>
 import { apiClient } from '../services/ApiClient'
-import router from '../router/index'
 import EditPost from '../components/EditPost'
 import ProfileImage from './ProfileImage'
 import CommentsList from '../components/CommentsList'
@@ -226,7 +225,7 @@ width: 900px;
   &:focus,
   &:active {
     color: #747474 !important;
-    font-weight: normal;
+    font-weight:normal;
     background: none !important;
   }
 }
@@ -235,6 +234,7 @@ width: 900px;
   &__img {
     max-width: 100%;
     max-height: calc(100vh - 110px);
+    margin: 20px;
   }
 }
 
