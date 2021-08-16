@@ -73,6 +73,7 @@ export default {
 .user-name {
   font-size: 20px;
   font-weight: bold;
+  color: white;
 }
 
 @media screen and (min-width: 280px) and (max-width: 767px) {

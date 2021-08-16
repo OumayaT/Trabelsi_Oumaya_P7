@@ -38,6 +38,7 @@ export default {
   border-radius: 0.25rem;
   background-color: transparent;
   border: none;
+  color: #ba4a55;
   &:hover {
     text-decoration: underline;
     color:red;
